@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Lora:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <title>Piedra, papel, tijera</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
@@ -14,18 +20,8 @@
       <section class="wrapper">
         <div class="dropping-box"></div>
         <div class="dropping-elements">
-          <img
-            src="/img/piedra.png"
-            class="elements"
-            id="stone"
-            alt="piedra"
-          />
-          <img
-            src="/img/papel.png"
-            class="elements"
-            id="paper"
-            alt="papel"
-          />
+          <img src="/img/piedra.png" class="elements" id="rock" alt="piedra" />
+          <img src="/img/papel.png" class="elements" id="paper" alt="papel" />
           <img
             src="/img/tijera.png"
             class="elements"
@@ -33,7 +29,22 @@
             alt="tijeras"
           />
         </div>
+        <div class="score-board">
+          <div class="badges">
+            <div id="user-badge" class="badge">User</div>
+            <div id="cpu-badge" class="badge">Compu</div>
+          </div>
+          <span id="user-score">0</span>:<span id="cpu-score">0</span>
+        </div>
       </section>
+      <div class="btn-container">
+        <button id="restart" class="restart-btn">Restart Game</button>
+      </div>
     </div>
+    <!-- Modal -->
+    <div class="modal">
+      <div id="result" class="modal-content"></div>
+    </div>
+    <script src="/js/script.js" defer></script>
   </body>
 </html>

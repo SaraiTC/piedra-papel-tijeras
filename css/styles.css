@@ -1,47 +1,162 @@
+:root {
+    --bg-color:#5c4944;
+    --text-color:#d5ab63;
+    --box-color:#3e6645;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .background {
-    background-color: aliceblue;
-    width: 100vw;
-    height:100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 35px;
+    background: url(/img/descarga.png);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.background h1 {
+    color: var(--text-color);
+    font-size: 2.8rem;
+    font-family: 'Lora', serif;
+}
+
+.background p {
+    color: black;
+    font-size: 1.3rem;
+    font-family: 'Karla', sans-serif;
 }
 
 .wrapper {
-    display: flex;
-    gap: 10px;
-    align-content: center;
-
-
+  display: flex;
+  gap: 90px;
+  align-content: center;
 }
 
 .dropping-box {
-    background-color: blueviolet;
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    align-self: center;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.521);
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  align-self: center;
 }
-
 
 .dropping-elements {
-    display: flex;
-    flex-direction: column;
-    background-color: blueviolet;
-    width: 150px;
-    height: 300px;
-    justify-items: center;
-    align-content: center;
-    border-radius: 10px;
-    padding: 35px;
-
+  display: flex;
+  flex-direction: column;
+  background-color: var(--box-color);
+  width: 150px;
+  height: 300px;
+  justify-items: center;
+  align-content: center;
+  border-radius: 10px;
+  padding: 35px;
 }
 
+.dropping-elements img {
+    cursor: pointer;
+}
+
+.btn-container{
+    text-align: center;
+  }
+  
+  .restart-btn {
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .restart-btn:hover{
+    cursor: pointer;
+    background-color: var(--box-color);
+    color: var(--text-color);
+  }
+
+  /* ------------------------------Score board */
+.score-board{
+    margin: 10% auto 5%;
+    text-align: center;
+    color: var(--text-color);
+    border: 3px solid var(--box-color);
+    text-align: center;
+    width: 250px;
+    font-size: 60px;
+    padding: 30px 10px;
+  }
+  
+  .badges{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      gap: 10px;
+    font-size: 1rem;
+    padding: 10px 10px;
+    border-radius: 12px;
+  }
+  .badge{
+    background:#c112a0;
+    font-size: 30px;
+    padding: 10px 10px;
+    border-radius: 12px;
+  }
+  
+  #user-badge{
+    top: 20px;
+    left: -50px;
+  }
+  
+  #cpu-badge{
+    top: 20px;
+    right: -65px;
+  }
+
+  .modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+    background-color: rgba(26, 5, 21, 0.5);
+  }
+  
+  .modal-content{
+    margin: 15% auto;
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    padding: 4%;
+    animation-name: modalopen;
+    animation-duration: 1s; 
+  }
+  
+  @keyframes modalopen{
+    from{
+      opacity: 0;
+    }
+  
+    to{
+      opacity: 1;
+    }
+  }
