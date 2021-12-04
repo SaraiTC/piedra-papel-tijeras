@@ -64,6 +64,7 @@ function play(userChoice) {
 }
 
 
+
 function main() {
   rock_div.addEventListener('click', function() {
     play('rock');
@@ -77,6 +78,7 @@ function main() {
     play('scissors');
   })
 }
+
 
 
 function clearModal(e){
