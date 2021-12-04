@@ -43,8 +43,8 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.521);
   background-color: transparent;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 300px;
   border-radius: 10px;
   align-self: center;
 }
@@ -90,7 +90,6 @@
 
   /* ------------------------------Score board */
 .score-board{
-    margin: 10% auto 5%;
     text-align: center;
     color: var(--text-color);
     border: 3px solid var(--box-color);
