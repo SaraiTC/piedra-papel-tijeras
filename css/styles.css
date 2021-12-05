@@ -10,7 +10,7 @@
 }
 
 .background {
-  background: url("img/descarga.png");
+  background: url(img/descarga.png) repeat;
   width: 100vw;
   height: 97vh;
   display: flex;
