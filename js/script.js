@@ -6,13 +6,13 @@ const cpuScore_span = document.getElementById("cpu-score");
 const restart = document.getElementById("restart");
 const result = document.getElementById ("result")
 const modal = document.querySelector(".modal");
-const rock_div = document.getElementById("rock");
-const paper_div = document.getElementById("paper");
-const scissors_div = document.getElementById("scissors");
+const rock_div = document.getElementById("piedra");
+const paper_div = document.getElementById("papel");
+const scissors_div = document.getElementById("tijeras");
 
 
 function getCpuChoice() {
-  const choices = ['rock', 'paper', 'scissors'];
+  const choices = ['piedra', 'papel', 'tijeras'];
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
 }
@@ -22,7 +22,7 @@ function win(userChoice, cpuChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1 class="text-win">¡Has ganado!</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`;
+  result.innerHTML = `<h1 class="text-win">¡Has ganado!</h1> <p>La máquina escogió <strong>${cpuChoice}</strong></p><img src="img/1F389_color.png" style="width: 100px;">`;
   modal.style.display = 'block';
 }
 
@@ -30,14 +30,14 @@ function lose(userChoice, cpuChoice){
   cpuScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1 class="text-lose">You lost</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`; 
+  result.innerHTML = `<h1 class="text-lose">¡Has perdido!</h1> <p>La máquina escogió <strong>${cpuChoice}</strong></p><img src="img/1F63F_color.png" style="width: 100px;">`; 
   modal.style.display = 'block'
 }
 
 function draw(userChoice, cpuChoice){
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1>It's a draw</h1> <p>You both choose <strong>${cpuChoice}</strong></p>`;
+  result.innerHTML = `<h1>¡Empate!</h1> <p>Escogisteis <strong>${cpuChoice}</strong></p><img src="img/229C_color.png" style="width: 100px;">`;
   modal.style.display = 'block'
 }
 
@@ -45,19 +45,19 @@ function draw(userChoice, cpuChoice){
 function play(userChoice) {
   const cpuChoice = getCpuChoice();
   switch (userChoice + cpuChoice) {
-    case 'rockscissors':
-    case 'paperrock':
-    case 'scissorspaper':
+    case 'piedratijeras':
+    case 'papelpiedra':
+    case 'tijeraspapel':
       win(userChoice, cpuChoice);
       break;
-    case 'rockpaper':
-    case 'paperscissors':
-    case 'scissorsrock':
+    case 'piedrapapel':
+    case 'papeltijeras':
+    case 'tijeraspiedra':
       lose(userChoice, cpuChoice);
       break;
-    case 'rockrock':
-    case 'paperpaper':
-    case 'scissorsscissors':
+    case 'piedrapiedra':
+    case 'papelpapel':
+    case 'tijerastijeras':
       draw(userChoice, cpuChoice);
       break;
   }
@@ -67,15 +67,15 @@ function play(userChoice) {
 
 function main() {
   rock_div.addEventListener('click', function() {
-    play('rock');
+    play('piedra');
   })
   
   paper_div.addEventListener('click', function() {
-    play('paper');
+    play('papel');
   })
   
   scissors_div.addEventListener('click', function() {
-    play('scissors');
+    play('tijeras');
   })
 }
 

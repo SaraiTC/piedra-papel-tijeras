@@ -152,6 +152,11 @@
   }
   
   .modal-content{
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    gap: 10%;
+    align-items: center;
     margin: 15% auto;
     width: 300px;
     height: 300px;
