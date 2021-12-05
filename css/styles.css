@@ -10,7 +10,7 @@
 }
 
 .background {
-  background: url(piedra-papel-tijeras/img/descarga.png) repeat;
+  background: url(https://raw.githubusercontent.com/SaraiTC/piedra-papel-tijeras/master/img/descarga.png) repeat;
   width: 100vw;
   height: 97vh;
   display: flex;
