@@ -2,7 +2,7 @@
 
 Proyecto de un juego de piedra, papel o tijera utilizando HTML, CSS y vanilla JS.
 
-Se trata de un proyecto realizado como ejercicio de aprendizaje.
+Se trata de un proyecto realizado como ejercicio de aprendizaje, con especial hincapié en el JS y el hacer responsive la página.
 
 Para realizarlo me basé en el siguiente repositorio: https://github.com/iamdulce/rock-paper-scissors-.
 
